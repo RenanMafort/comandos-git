@@ -1,4 +1,4 @@
-git init
+## git init
 
 git clone
 
@@ -8,8 +8,8 @@ git add .
 
 git commit -a -m "....."
 
---USADO PARA MOVER OU RENOMEAR
-git mv
+## --USADO PARA MOVER OU RENOMEAR
+### git mv
 
 --remove arquivo ou diretorio
 git rm / git rm -r 
