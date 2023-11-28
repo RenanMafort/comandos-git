@@ -9,7 +9,7 @@ git add .
 git commit -a -m "....."
 
 ## --USADO PARA MOVER OU RENOMEAR
-### git mv
+git mv
 
 --remove arquivo ou diretorio
 git rm / git rm -r 
