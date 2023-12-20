@@ -48,7 +48,7 @@ git stash drop <numero_stash>
 git stash clear 
 
 ## - cria uma tag
-git tag -a <nome> -m <mensagem>
+git tag -a 'nome' -m 'mensagem'
 
 ## - lista as tags criadas
 git tag
