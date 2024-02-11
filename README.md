@@ -1,113 +1,112 @@
-## git init
+# GIT INIT
 
-## git clone
+# GIT CLONE
 
-## git status
+# GIT STATUS
 
-## git add .
+# GIT ADD .
 
-## git commit -a -m "....."
+# GIT COMMIT -A -M "....."
 
-## - USADO PARA MOVER OU RENOMEAR
-git mv
+# - USADO PARA MOVER OU RENOMEAR
+GIT MV
 
-## - remove arquivo ou diretorio
-git rm / git rm -r 
+# - REMOVE ARQUIVO OU DIRETÓRIO
+GIT RM / GIT RM -R 
 
-## - volta tudo ao estado inicial
-git reset -- hard <repo>
+# - VOLTA TUDO AO ESTADO INICIAL
+GIT RESET -- HARD <REPO>
 
-## - VOLTA O ARQUIVO AO ESTADO INICIAL
-git checkout <arquivo>
+# - VOLTA O ARQUIVO AO ESTADO INICIAL
+GIT CHECKOUT <ARQUIVO>
 
-## - CRIA UMA BRANCH E TROCA AO MESMO TEMPO
-git checkout -b <nome_branch>
+# - CRIA UMA BRANCH E TROCA AO MESMO TEMPO
+GIT CHECKOUT -B <NOME_BRANCH>
 
-## - TROCA PARA A BRANCH ESCOLHIDA
-git checkout <nome_branch>
+# - TROCA PARA A BRANCH ESCOLHIDA
+GIT CHECKOUT <NOME_BRANCH>
 
-## - mescla branchs
-git merge
+# - MESCLA BRANCHES
+GIT MERGE
 
-## - DESFAZ E SALVA AS IMPLEMENTACOES PARA SER RECUPERADAS DEPOIS
-git statsh
+# - DESFAZ E SALVA AS IMPLEMENTAÇÕES PARA SER RECUPERADAS DEPOIS
+GIT STASH
 
-## - MOSTRA AS STASHS CRIADAS
-git statsh list
+# - MOSTRA AS STASHES CRIADAS
+GIT STASH LIST
 
-## - RECUPERA A STASH
-git stash apply <numero-stash>
+# - RECUPERA A STASH
+GIT STASH APPLY <NUMERO-STASH>
 
-## - MOSTRA AS ALTERAÇÕES FEITAS NAS STASHS
-git stash show -p <numero_stash>
+# - MOSTRA AS ALTERAÇÕES FEITAS NAS STASHES
+GIT STASH SHOW -P <NUMERO_STASH>
 
-## - exclui a statsh
-git stash drop <numero_stash>
+# - EXCLUI A STASH
+GIT STASH DROP <NUMERO_STASH>
 
-## - limpa todas as statsh
-git stash clear 
+# - LIMPA TODAS AS STASHES
+GIT STASH CLEAR 
 
-## - cria uma tag
-git tag -a 'nome' -m 'mensagem'
+# - CRIA UMA TAG
+GIT TAG -A 'NOME' -M 'MENSAGEM'
 
-## - lista as tags criadas
-git tag
+# - LISTA AS TAGS CRIADAS
+GIT TAG
 
-## - DETALHA AS ALTERAÇÕES DAS TAGS
-git show <nome_tag>
+# - DETALHA AS ALTERAÇÕES DAS TAGS
+GIT SHOW <NOME_TAG>
 
-## - TROCA DE TAG
-git checkout <nome_tag>
+# - TROCA DE TAG
+GIT CHECKOUT <NOME_TAG>
 
-## - ENVIA A TAG PARA O REPOSITORIO
-git push <repo> <nome_tag>
+# - ENVIA A TAG PARA O REPOSITÓRIO
+GIT PUSH <REPO> <NOME_TAG>
 
-## - ENVIA TODAS AS TAGAS PARA O REPOSITORIO
-git push <repo> --tags
+# - ENVIA TODAS AS TAGS PARA O REPOSITÓRIO
+GIT PUSH <REPO> --TAGS
 
-## - DELETA UMA TAG
-git tag -d <nome_tag>
+# - DELETA UMA TAG
+GIT TAG -D <NOME_TAG>
 
-## - ATUALIZA TODAS AS BRANCHS E TAGS DO REPOSITORIO PARA O LOCAL
-git fetch
+# - ATUALIZA TODAS AS BRANCHES E TAGS DO REPOSITÓRIO PARA O LOCAL
+GIT FETCH
 
-## - BAIXA TODAS AS BRANCH
-git fetch -a
+# - BAIXA TODAS AS BRANCHES
+GIT FETCH -A
 
-## - verifica os remote
- git remote -v
+# - VERIFICA OS REMOTES
+ GIT REMOTE -V
 
-## - remove o remote com repositorio
-git remote rm <repo>
+# - REMOVE O REMOTE COM REPOSITÓRIO
+GIT REMOTE RM <REPO>
 
-## - verifica os modulos
-git submodule
+# - VERIFICA OS MÓDULOS
+GIT SUBMODULE
 
-## - adiciona o repositorio modulo
-git submodule add <repo>
+# - ADICIONA O REPOSITÓRIO MÓDULO
+GIT SUBMODULE ADD <REPO>
 
-## - push no module
-git push --recurse-submodules=on-demand 
+# - PUSH NO MÓDULO
+GIT PUSH --RECURSE-SUBMODULES=ON-DEMAND 
 
-## - DIFERENÇA DA BRANCH ATUAL PARA A BRANCH REMOTA
-git diff
+# - DIFERENÇA DA BRANCH ATUAL PARA A BRANCH REMOTA
+GIT DIFF
 
-## - DIFERENÇA DE DOIS ARQUIVOS
-git diff <arquivo_a> <arquivo_b>
+# - DIFERENÇA DE DOIS ARQUIVOS
+GIT DIFF <ARQUIVO_A> <ARQUIVO_B>
 
-## - log resumido de tudo o que aconteceu
-git shortlog
+# - LOG RESUMIDO DE TUDO O QUE ACONTECEU
+GIT SHORTLOG
 
-## - Faz com que o arquivo não seja rastreado pelo git
-git update-index --assume-unchanged <file>
+# - FAZ COM QUE O ARQUIVO NÃO SEJA RASTREADO PELO GIT
+GIT UPDATE-INDEX --ASSUME-UNCHANGED <FILE>
 
-## - Desfaz o comando acima
-git update-index --no-assume-unchanged <file>
+# - DESFAZ O COMANDO ACIMA
+GIT UPDATE-INDEX --NO-ASSUME-UNCHANGED <FILE>
 
 
-##  - Para obter uma lista de arquivos / arquivos que são assume-unchanged execute isso em um shell unix:
-git ls-files -v | grep '^h'
+#  - PARA OBTER UMA LISTA DE ARQUIVOS / ARQUIVOS QUE SÃO ASSUME-UNCHANGED EXECUTE ISSO EM UM SHELL UNIX:
+GIT LS-FILES -V | GREP '^H'
 
-## - ou em um PowerShell:
-git ls-files -v | Select-String -CaseSensitive '^h'
-
+# - OU EM UM POWERSHELL:
+GIT LS-FILES -V | SELECT-STRING -CASESENSITIVE '^H'
