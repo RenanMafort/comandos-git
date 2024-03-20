@@ -115,6 +115,51 @@ GIT LS-FILES -V | SELECT-STRING -CASESENSITIVE '^H'
 #SERVE PARA ALTERAR UM COMMIT
 #Isso abrirá um editor de texto com uma lista de commits. O HEAD~1 indica que você quer rebasear até o commit anterior ao HEAD (ou seja, o último commit).
 git rebase -i HEAD~1
-
-
 ```
+Existem 3 situações diferentes, que vão ficando cada vez mais complexas:
+
+Editar o último commit local - ANTES DO PUSH:
+O git commit --amend vai abrir seu editor, com o conteúdo da mensagem do último commit e você pode editar tranquilamente.
+
+Editar commits mais antigos - ANTES DO PUSH:
+Você vai precisar fazer um rebase do seu histórico, que é mais complexo que o processo anterior:
+
+$ git rebase -i HEAD~3 # Mostra a lista dos 3 últimos commits
+A lista vai ser mais ou menos assim:
+
+pick e499d89 Delete CNAME
+pick 0c39034 Better README
+pick f7fde4a Change the commit message but push the same commit.
+
+# Rebase 9fdb3bd..f7fde4a onto 9fdb3bd
+#
+# Commands:
+#  p, pick = use commit
+#  r, reword = use commit, but edit the commit message
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#  f, fixup = like "squash", but discard this commit's log message
+#  x, exec = run command (the rest of the line) using shell
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out
+Altere pick para reword nos commits que você quer editar a mensagem:
+
+pick e499d89 Delete CNAME
+reword 0c39034 Better README
+reword f7fde4a Change the commit message but push the same commit.
+Salve e feche o arquivo. Depois disso o git vai abrir cada um dos commits marcados com reword para edição. Edite as mensagens, salve e feche.
+
+Alterar os commits DEPOIS DO PUSH
+Antes de mais nada, isso é altamente não recomendado.
+Isso pode quebrar o respositório e dar muito trabalho.
+99.9% das vezes é melhor deixar o commit errado.
+
+Para alterar o histórico depois do push, basta seguir um dos passos acima e depois executar:
+
+git push --force
