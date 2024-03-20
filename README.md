@@ -112,4 +112,9 @@ GIT LS-FILES -V | GREP '^H'
 # - OU EM UM POWERSHELL:
 GIT LS-FILES -V | SELECT-STRING -CASESENSITIVE '^H'
 
+#SERVE PARA ALTERAR UM COMMIT
+#Isso abrirá um editor de texto com uma lista de commits. O HEAD~1 indica que você quer rebasear até o commit anterior ao HEAD (ou seja, o último commit).
+git rebase -i HEAD~1
+
+
 ```
